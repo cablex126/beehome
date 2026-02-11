@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Home Labor Multipurpose Cooperative</title>
+    <link rel="stylesheet" href="../CSS/membership.css">
+    <link rel="icon" type="image/png" href="../IMAGES/logo.png">
+</head>
+<body>
+
+ <!-- NAVIGATION CONTENTS HERE / Dont change the contents under this section -->
+
+<nav>
+    <div class="logo">
+        <a href="home.html">
+        <img src="../IMAGES/logo.png" alt="Bee Home Logo">
+    </a>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../HTML/home.html">Home</a></li>
+        <li><a href="../HTML/about.html">About Us</a></li>
+        <li><a href="../HTML/products.html">Products & Services</a></li>
+        <li><a href="../HTML/membership.html" class="active">Membership</a></li>
+        <li><a href="../HTML/bee-home-cares.html">Bee Home Cares</a></li>
+        <li><a href="../HTML/contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- RESPONSIVE CODE HERE / Dont change this section -->
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+ <!-- MEMBERSHIP PAGE CONTENTS START HERE -->
+   
+    <section class="membership-hero">
+        <h1>MEMBERSHIP</h1>
+    </section>
+
+    
+    <section class="membership-cards">
+
+        <!-- CARD 1 -->
+        <div class="member-card">
+            <div class="card-bg" style="background-image: url('../IMAGES/bhcares-img2.png');"></div>
+
+            <div class="card-overlay"></div>
+
+            <div class="card-content">
+                <h3>Regular Membership</h3>
+                <p>A Regular member is one who has compiled with all the membership requirements and entitled to all rights and privileges of membership.</p>
+                <button class="learn-btn">Learn More</button>
+            </div>
+
+            <div class="card-expanded">
+                <h3>Regular Membership</h3>
+                <ul>
+                    <li>Must be residing and/or working within the area of operation for at least two (2) years.</li>
+                    <li>At least college graduate or with work experience in the field of specialization for at least two years.</li>
+                    <li>With good moral character and no derogatory records.</li>
+                </ul>
+                <button class="close-btn">Close</button>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="member-card">
+            <div class="card-bg" style="background-image: url('../IMAGES/home-img2.png');"></div>
+
+            <div class="card-overlay"></div>
+
+            <div class="card-content">
+                <h3>Associate Membership</h3>
+                <p>An Associate member is the one who has no voting rights and entitled only to rights and privileges specified in the by-laws.</p>
+                <button class="learn-btn">Learn More</button>
+            </div>
+
+            <div class="card-expanded">
+                <h3>Associate Membership</h3>
+                <ul>
+                    <li>Must be residing and/or working within the area of operation for at least Six (6) months.</li>
+                    <li>At least High school graduate.</li>
+                    <li>With good moral character and no derogatory records.</li>
+                </ul>
+                <button class="close-btn">Close</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- LEFT -->
+            <div class="footer-left">
+                <img src="../IMAGES/logo.png" alt="Bee Home Logo" class="footer-logo">
+                <h3>BEE HOME LABOR MULTIPURPOSE COOPERATIVE</h3>
+                <p>UNIT 203, 2ND FLOOR, MGC VERANDA BUILDING, 31, GOV. PASCUAL AVENUE, MALABON, METRO MANILA</p>
+                <p>(02) 8442 7296</p>
+            </div>
+
+            <!-- MIDDLE -->
+            <div class="footer-middle">
+                <ul>
+                    <li><a href="../HTML/home.html">Home</a></li>
+                    <li><a href="../HTML/about.html">About Us</a></li>
+                    <li><a href="../HTML/products.html">Products & Services</a></li>
+                    <li><a href="../HTML/membership.html">Membership</a></li>
+                    <li><a href="../HTML/bee-home-cares.html">Bee Home Cares</a></li>
+                    <li><a href="../HTML/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-right">
+                <h3>CONNECT WITH US</h3>
+                <p>
+                    <a href="https://www.facebook.com/kabeehome/" target="_blank">
+                        <img src="../IMAGES/logo-fb.png" alt="FB" class="footer-icon"> 
+                        Bee Home Labor Multipurpose Cooperative
+                    </a>
+                </p>
+                <p><img src="../IMAGES/logo-email.png" alt="Gmail" class="footer-icon"> recruitment.bhlsc@gmail.com</p>
+                <p><img src="../IMAGES/logo-phone.png" alt="Phone" class="footer-icon"> 0917 588 1203</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    const cards = document.querySelectorAll('.member-card');
+
+        cards.forEach(card => {
+            const learnBtn = card.querySelector('.learn-btn');
+            const closeBtn = card.querySelector('.close-btn');
+
+            learnBtn.addEventListener('click', () => {
+                card.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                card.classList.remove('active');
+            });
+        });
+</script>
+
+</body>
+</html>
